@@ -1,6 +1,7 @@
 node {
     def app
-    
+    agent { dockerfile true }
+
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
 

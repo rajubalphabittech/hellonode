@@ -34,7 +34,7 @@ node {
         }
     }
     stage('Deploy to Dev') {
-      def dockerRun = 'sudo docker run -d --name  my-node-app -p 80:8000  damukiran/hellonode:latest'
+      def dockerRun = 'sudo docker run -d --name  my-node-app -p 49162:8000  damukiran/hellonode:latest'
       sshagent(['ssh_aws']) {
       sh "ssh -o StrictHostKeyChecking=no ubuntu@ec2-15-206-128-99.ap-south-1.compute.amazonaws.com ${dockerRun}"
      }

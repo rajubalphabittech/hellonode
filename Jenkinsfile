@@ -35,8 +35,12 @@ node {
     }
     stage('Deploy to Dev') {
       def dockerRun = 'sudo docker run -d --name  my-node-app -p 49162:8000  damukiran/hellonode:latest'
+      def dockerRemove = 'sudo docker container rm  my-node-app -f'
+ 
       sshagent(['ssh_aws']) {
+      sh "ssh -o StrictHostKeyChecking=no ubuntu@ec2-13-232-232-249.ap-south-1.compute.amazonaws.com ${dockerRemove}"
       sh "ssh -o StrictHostKeyChecking=no ubuntu@ec2-13-232-232-249.ap-south-1.compute.amazonaws.com ${dockerRun}"
+
      }
      }
 

@@ -12,10 +12,15 @@ node {
       def inst = 'npm i'
       def nav = 'cd hellonode'
       def comm ='cd hellonode\n git fetch origin\n git checkout master\n git pull origin master\n git merge origin/master'
+        def command1 = ["git", "checkout", "master"]
+       def command2 = ["git", "pull", "origin", "master"]
+
 
       sshagent(['ssh_aws']) {
-      sh "ssh -o StrictHostKeyChecking=no ubuntu@ec2-13-232-232-249.ap-south-1.compute.amazonaws.com ${comm}"
-     }
+      sh "ssh -o StrictHostKeyChecking=no ubuntu@ec2-13-232-232-249.ap-south-1.compute.amazonaws.com ${command1}"
+      sh "ssh -o StrictHostKeyChecking=no ubuntu@ec2-13-232-232-249.ap-south-1.compute.amazonaws.com ${command2}"
+
+      }
      }
 
 }

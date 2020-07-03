@@ -11,14 +11,10 @@ node {
       def git = 'git pull'
       def inst = 'npm i'
       def nav = 'cd hellonode'
-
+      def comm ='cd hellonode\n git pull'
 
       sshagent(['ssh_aws']) {
-      sh "ssh -o StrictHostKeyChecking=no ubuntu@ec2-13-232-232-249.ap-south-1.compute.amazonaws.com ${nav}"
-      sh "ssh -o StrictHostKeyChecking=no ubuntu@ec2-13-232-232-249.ap-south-1.compute.amazonaws.com ${git}"
-      sh "ssh -o StrictHostKeyChecking=no ubuntu@ec2-13-232-232-249.ap-south-1.compute.amazonaws.com ${inst}"
-    
-
+      sh "ssh -o StrictHostKeyChecking=no ubuntu@ec2-13-232-232-249.ap-south-1.compute.amazonaws.com ${comm}"
      }
      }
 

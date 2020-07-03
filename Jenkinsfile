@@ -36,9 +36,11 @@ node {
     stage('Deploy to Dev') {
       def git = 'git pull'
       def inst = 'npm i'
+      def nav = 'cd hellonode'
 
 
       sshagent(['ssh_aws']) {
+      sh "ssh -o StrictHostKeyChecking=no ubuntu@ec2-13-232-232-249.ap-south-1.compute.amazonaws.com ${nav}"
       sh "ssh -o StrictHostKeyChecking=no ubuntu@ec2-13-232-232-249.ap-south-1.compute.amazonaws.com ${git}"
       sh "ssh -o StrictHostKeyChecking=no ubuntu@ec2-13-232-232-249.ap-south-1.compute.amazonaws.com ${inst}"
     

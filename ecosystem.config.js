@@ -1,6 +1,6 @@
 module.exports = { 
   apps: [{
-    name    : "node-app",
+    name    : "hellonode",
     script  : "npm",
     args    : "start"
   }]

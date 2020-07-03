@@ -9,4 +9,4 @@ var server = http.createServer(function (request, response) {
 
 // listen on localhost:8000
 server.listen(8000);
-console.log("Server we are listening at http://127.0.0.1:8000/");
+console.log("Server we are now listening at http://127.0.0.1:8000/");

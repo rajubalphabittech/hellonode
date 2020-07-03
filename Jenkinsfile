@@ -10,7 +10,7 @@ node {
     stage('Deploy to Dev') {
       def git = 'git branch'
       def inst = 'npm i'
-      def nav = 'cd hellonode'
+      def nav = 'cd hellonode\n node deploy'
       def comm ='cd hellonode\n git fetch origin\n git checkout master\n git pull origin master\n git merge origin/master'
 
 

@@ -15,7 +15,7 @@ node {
 
 
       sshagent(['ssh_aws']) {
-      sh "ssh -o StrictHostKeyChecking=no ubuntu@ec2-13-232-232-249.ap-south-1.compute.amazonaws.com ${comm}"
+      sh "ssh -o StrictHostKeyChecking=no ubuntu@ec2-13-232-232-249.ap-south-1.compute.amazonaws.com ${nav}"
 
       }
      }

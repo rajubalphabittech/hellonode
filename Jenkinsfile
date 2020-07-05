@@ -11,7 +11,7 @@ node {
       def git = 'git branch'
       def inst = 'npm i'
       def nav = 'cd hellonode\n sudo chown-R $USER: .\n git pull https://github.com/damukiran/hellonode.git master'
-      def comm ='cd hellonode\n git fetch origin\n git checkout master\n git pull\n'
+      def comm ='cd hellonode\n git fetch origin\n git checkout master\n git pull origin master'
 
 
       sshagent(['ssh_aws']) {

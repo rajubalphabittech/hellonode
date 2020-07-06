@@ -1,5 +1,4 @@
 node {
-    agent any
     def app
     tools {nodejs "node"}
 

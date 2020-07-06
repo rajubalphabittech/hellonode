@@ -1,6 +1,6 @@
 pipeline { 
   agent any 
-  tools {nodejs "node"}
+  tools {nodejs "node10"}
 
   stages {
     stage ('Checkout Code') {

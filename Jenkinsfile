@@ -1,4 +1,4 @@
-node {
+pipeline {
     def app
     tools {nodejs "node"}
 

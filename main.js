@@ -9,4 +9,4 @@ var server = http.createServer(function (request, response) {
 
 // listen on localhost:8000
 server.listen(9000);
-console.log("we now in local://127.0.0.1:9000/");
+console.log("code changed successfully://127.0.0.1:9000/");

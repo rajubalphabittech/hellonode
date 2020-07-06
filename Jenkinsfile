@@ -9,7 +9,7 @@ node {
     stage('Deploy to Dev') {
       def git = 'git branch'
       def inst = 'npm i'
-      def nav = 'cd hellonode\n git pull'
+      def nav = 'cd hellonode\n git checkout master\n git pull'
       def comm ='cd hellonode\n git fetch origin\n git checkout master\n git pull\n git branch --set-upstream-to=origin/master master\n git pull'
       def deploy='cd hellonode\n chmod +x ./publish.sh\n ./publish.sh'
 

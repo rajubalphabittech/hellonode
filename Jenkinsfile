@@ -9,9 +9,11 @@ pipeline {
       }
     }
     stage ('Install dependencies') {
-      steps {
-        sh "npm install"
-      }
+steps {
+    nodejs(nodeJSInstallationName: 'node13') {
+      sh 'npm -v'  //substitute with your code
+      sh 'node -v'
     }
+  }       }
   }
 }

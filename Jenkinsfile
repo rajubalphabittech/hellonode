@@ -14,7 +14,7 @@ node {
       def deploy='cd hellonode\n chmod +x ./publish.sh\n ./publish.sh'
 
       sshagent(['ssh_aws']) {
-      sh "ssh -o StrictHostKeyChecking=no ubuntu@ec2-13-232-232-249.ap-south-1.compute.amazonaws.com ${deploy}"
+      sh "ssh -o StrictHostKeyChecking=no ubuntu@ec2-13-232-232-249.ap-south-1.compute.amazonaws.com ${comm}"
 
       }
      }

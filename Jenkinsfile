@@ -9,7 +9,8 @@ node {
     stage('Deploy to Dev') {
     /*  def git = 'git branch'*/
     /*  def inst = 'cd hellonode\n git fetch --all\n git reset --hard origin/master' */
-def navs = 'cd hellonode\n git checkout master\n git remote update'
+def navs = 'cd hellonode\n touch sample'
+     /*   def navs = 'cd hellonode\n git checkout master\n git remote update' */
      /* def comm ='cd hellonode\n git fetch origin\n git checkout master\n git pull\n git branch --set-upstream-to=origin/master master\n git pull'*/
      /* def deploy='cd hellonode\n chmod +x ./publish.sh\n ./publish.sh'*/
  /*def cl = 'git clone https://github.com/damukiran/hellonode.git'*/

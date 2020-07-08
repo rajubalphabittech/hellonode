@@ -1,0 +1,8 @@
+#!/bin/sh
+
+ssh ubuntu@13.126.91.142 <<EOF
+    
+    cd ~/hellonode
+    git pull origin master
+    exit
+EOF

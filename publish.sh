@@ -1,4 +1,5 @@
 #!/bin/sh
+man ssh | less -Ip 'multiple -t'
 ssh ubuntu@13.126.91.142 <<EOF
     cd ~/hellonode
     git pull origin master
